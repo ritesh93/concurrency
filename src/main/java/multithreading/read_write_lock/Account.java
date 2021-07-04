@@ -1,4 +1,4 @@
-package multithreading;
+package multithreading.read_write_lock;
 
 public class Account {
 

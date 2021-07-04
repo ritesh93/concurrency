@@ -1,36 +1,22 @@
 package task_scheduler;
 
-public class Task{
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@ToString
+public class Task {
     private Long startTime;
-    private int intervals;
-    private int count;
+    private int counter;
+    private String taskName;
+    private String taskDescription;
 
-    Task(Long startTime, int intervals, int count){
-        this.startTime = startTime;
-        this.intervals = intervals;
-        this.count = count;
-    }
-    public  void execute(){
-        System.out.println("no implementation");
-    }
-
-//    public TaskConfig getConfig(){
-//        return config;
-//    }
-
-//    public void setConfig(TaskConfig config){
-//        this.config = config;
-//    }
-
-    public Long getStartTime(){
-        return startTime;
-    }
-
-    public int getIntervals(){
-        return intervals;
-    }
-
-    public int getCount(){
-        return count;
+    public void action(){
+        System.out.println("Executing task with taskname "+ taskName+"::"+counter+" times");
     }
 }
